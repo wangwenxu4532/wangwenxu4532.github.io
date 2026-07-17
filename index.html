@@ -182,6 +182,18 @@
                         <li>团队获全国大学生智能车竞赛东北赛区优秀奖</li>
                     </ul>
                 </div>
+                <div class="project-card" data-project="fridge" style="cursor: pointer;">
+                    <div class="project-header">
+                        <h3>自制小冰箱</h3>
+                        <span class="project-date">2026-07</span>
+                    </div>
+                    <p class="project-role">独立开发</p>
+                    <p class="project-desc">基于单片机控制的半导体制冷片小冰箱，实现温度实时监测与自动控制。</p>
+                    <ul class="project-list">
+                        <li>点击卡片查看详细项目资料、代码、物料清单与接线图</li>
+                    </ul>
+                    <div class="project-view-hint">点击查看详情</div>
+                </div>
             </div>
         </div>
     </section>
@@ -337,6 +349,87 @@
             <p>&copy; 2026 王文旭 | 嵌入式软件工程师 | 黑龙江东方学院</p>
         </div>
     </footer>
+
+    <!-- 项目详情弹窗 -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title">自制小冰箱</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-section">
+                    <h3>项目介绍</h3>
+                    <p>基于STC89C52单片机控制的半导体制冷片小冰箱，实现温度实时监测与自动控制。通过DS18B20温度传感器采集箱内温度，根据设定温度阈值自动启停制冷片，同时配合LCD1602液晶显示屏实时显示当前温度与工作状态。</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>实物展示</h3>
+                    <div class="modal-images" id="fridgeImages">
+                        <p class="modal-placeholder">实物照片待补充...</p>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>下载资料</h3>
+                    <div class="modal-downloads">
+                        <a href="assets/fridge/code.zip" download class="download-item">
+                            <span class="download-icon">📦</span>
+                            <span class="download-text">
+                                <strong>源代码</strong>
+                                <small>包含Keil5工程文件</small>
+                            </span>
+                        </a>
+                        <a href="assets/fridge/bom.pdf" download class="download-item">
+                            <span class="download-icon">📋</span>
+                            <span class="download-text">
+                                <strong>物料清单 (BOM)</strong>
+                                <small>元器件清单与规格</small>
+                            </span>
+                        </a>
+                        <a href="assets/fridge/wiring.pdf" download class="download-item">
+                            <span class="download-icon">🔌</span>
+                            <span class="download-text">
+                                <strong>接线清单</strong>
+                                <small>硬件接线图与说明</small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>技术参数</h3>
+                    <div class="modal-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">主控芯片</span>
+                            <span class="spec-value">STC89C52RC</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">温度传感器</span>
+                            <span class="spec-value">DS18B20</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">显示模块</span>
+                            <span class="spec-value">LCD1602</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">制冷方式</span>
+                            <span class="spec-value">半导体制冷片 TEC1-12706</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">供电电源</span>
+                            <span class="spec-value">12V DC / 6A</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">控制方式</span>
+                            <span class="spec-value">继电器自动开关控制</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

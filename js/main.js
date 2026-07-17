@@ -75,4 +75,38 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.add('fade-in');
         observer.observe(element);
     });
+
+    // ===== 项目详情弹窗 =====
+    const projectModal = document.getElementById('projectModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const fridgeCard = document.querySelector('[data-project="fridge"]');
+
+    function openModal() {
+        projectModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        projectModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (fridgeCard) {
+        fridgeCard.addEventListener('click', openModal);
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 });
