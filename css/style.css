@@ -1010,6 +1010,53 @@ section {
     font-weight: 500;
 }
 
+/* ===== BOM 物料表格 ===== */
+.bom-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.bom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.bom-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.bom-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bom-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bom-table tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.bom-table tbody tr:hover {
+    background-color: #DBEAFE;
+}
+
+.bom-table tfoot {
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--primary-color);
+}
+
+.bom-table tfoot td {
+    padding: 0.75rem 1rem;
+}
+
 @media (max-width: 768px) {
     .modal-container {
         max-height: 95vh;
