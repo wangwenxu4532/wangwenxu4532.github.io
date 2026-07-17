@@ -1057,6 +1057,57 @@ section {
     padding: 0.75rem 1rem;
 }
 
+/* ===== 接线清单样式 ===== */
+.wiring-section h4 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 1.5rem 0 0.75rem 0;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.wiring-section h4:first-child {
+    margin-top: 0;
+}
+
+.wiring-note {
+    background-color: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-top: 0.75rem;
+}
+
+.wiring-note p {
+    margin: 0.3rem 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.wiring-steps {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 1rem 1rem 1rem 2.5rem;
+    margin-top: 0.75rem;
+}
+
+.wiring-steps li {
+    margin: 0.4rem 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===== 实物图片样式 ===== */
+.fridge-photo {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-md);
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
     .modal-container {
         max-height: 95vh;
